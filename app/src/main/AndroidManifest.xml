@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -22,30 +23,61 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".RegisterActivity"
+            android:label="Register">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cs.cyprusscores.LoginActivity" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:label="Today&apos;s Matches"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Tables"
-            android:label="Tables">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
         <activity
             android:name=".CalendarActivity"
             android:label="Calendar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="cs.cyprusscores.MainActivity" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:label="Register">
+            android:name=".Tables"
+            android:label="Tables">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="cs.cyprusscores.MainActivity" />
         </activity>
+        <activity
+            android:name=".TeamActivity"
+            android:label="CLUB"
+            android:parentActivityName=".Tables"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cs.cyprusscores.Tables" />
+        </activity>
+        <activity
+            android:name=".StadiumActivity"
+            android:label="STADIUM" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cs.cyprusscores.StadiumActivity" />
+        </activity>
+        <activity
+            android:name=".SquadActivity"
+            android:label="SQUAD" />
+        <activity
+            android:name=".PlayerActivity"
+            android:label="PLAYER"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

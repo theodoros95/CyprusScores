@@ -13,7 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import static cs.cyprusscores.CalendarActivity.*;
+import static cs.cyprusscores.CalendarActivity.MESSAGE;
+import static cs.cyprusscores.CalendarActivity.dateNow;
 
 public class MainActivity extends AppCompatActivity implements OnNavigationItemSelectedListener {
 

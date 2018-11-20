@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cs.cyprusscores.PlayerActivity">
+    <item
+        android:id="@+id/club"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="CLUB" />
+
+    <item
+        android:id="@+id/stadium"
+        android:orderInCategory="200"
+        android:showAsAction="never"
+        android:title="STADIUM" />
+
+</menu>

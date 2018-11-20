@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cs.cyprusscores">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -78,6 +80,20 @@
             android:name=".PlayerActivity"
             android:label="PLAYER"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--Antonis-->
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".ShowFeedbackActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FeedbackActivity" />
+        </activity>
+
+        <service
+            android:name=".TimerService"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         int id = item.getItemId();
 
         if (id == R.id.nav_feedback) {
-
+            startActivity(new Intent(this, FeedbackActivity.class));
         } else if (id == R.id.nav_tables) {
             startActivity(new Intent(this, Tables.class));
         } else if (id == R.id.nav_calendar) {

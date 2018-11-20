@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingLeft="20dp"
+    tools:context=".FeedbackActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate our application!"
+        android:textSize="18dp"
+        android:layout_marginLeft="7dp"
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:numStars="5"
+        android:layout_marginTop="5dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Did you like our application?"
+        android:textSize="18dp"
+        android:layout_marginLeft="7dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/likeanswer"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likeyes"
+            android:text="Yes"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likeno"
+            android:text="No"
+            android:textSize="18dp"
+            android:checked="false"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write your review about our application"
+        android:textSize="18dp"
+        android:layout_marginLeft="7dp"/>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="4dp"
+        android:hint="Write your review here"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/reviewtext"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receive our response by email"
+        android:textSize="18dp"
+        android:layout_marginLeft="7dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailanswer"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailyes"
+            android:text="Yes"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailno"
+            android:text="No"
+            android:textSize="18dp"
+            android:checked="false"
+            />
+
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="4dp"
+        android:hint="Type your email address"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/emailaddress"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionDone"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit"
+        android:textSize="18dp"
+        android:id="@+id/submit"
+        android:onClick="sendInfo"/>
+
+
+</LinearLayout>

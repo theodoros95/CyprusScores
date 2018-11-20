@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SquadActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SquadActivity">
 
     <TextView
         android:id="@+id/textView13"
@@ -15,17 +14,17 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="Click on a player to see more about him"
-        android:textSize="20dp"
-        android:textColor="#000" />
+        android:textColor="#000"
+        android:textSize="20dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:srcCompat="@drawable/p1"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:onClick="showPlayer1"/>
+        android:onClick="showPlayer1"
+        app:srcCompat="@drawable/p1" />
 
     <TextView
         android:id="@+id/textView11"
@@ -33,19 +32,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:onClick="showPlayer1"
         android:text="Demetris Christophi"
-        android:textSize="24dp"
         android:textColor="#000"
-        android:onClick="showPlayer1"/>
+        android:textSize="24dp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        app:srcCompat="@drawable/p2"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:onClick="showPlayer2"/>
+        android:onClick="showPlayer2"
+        app:srcCompat="@drawable/p2" />
 
     <TextView
         android:id="@+id/textView12"
@@ -53,10 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:onClick="showPlayer2"
         android:text="Matt Derbyshire"
-        android:textSize="24dp"
         android:textColor="#000"
-        android:onClick="showPlayer2"/>
+        android:textSize="24dp" />
 
 
 </LinearLayout>

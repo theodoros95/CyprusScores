@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
-    android:paddingTop="40dp"
     android:paddingLeft="20dp"
+    android:paddingTop="40dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".NotificationsActivity"
     tools:showIn="@layout/activity_notifications">
 
@@ -16,60 +15,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select what would you like to get notifications about:"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <CheckBox
+        android:id="@+id/goals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/goals"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
-        android:textSize="20dp"
-        android:text="Goals"/>
+        android:text="Goals"
+        android:textSize="20dp" />
 
     <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/news"
-        android:layout_marginBottom="10dp"
-        android:textSize="20dp"
-        android:text="News"/>
-
-    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="News"
+        android:textSize="20dp" />
+
+    <CheckBox
         android:id="@+id/scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:textSize="20dp"
         android:text="Scores (HT/FT)"
-        />
+        android:textSize="20dp" />
 
     <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/fixtures"
-        android:layout_marginBottom="10dp"
-        android:textSize="20dp"
-        android:text="Fixture Reminder"
-        />
-
-    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cards"
-        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Fixture Reminder"
+        android:textSize="20dp" />
 
+    <CheckBox
+        android:id="@+id/cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Yellow Cards / Red Cards"
-        />
+
+        android:textSize="20dp" />
 
     <Button
+        android:id="@+id/notifbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/notifbutton"
-        android:text="OK"
-        android:layout_marginTop="150dp"
         android:layout_gravity="center_horizontal"
-        android:onClick="sendNotification"/>
+        android:layout_marginTop="150dp"
+        android:onClick="sendNotification"
+        android:text="OK" />
 
 </LinearLayout>
 

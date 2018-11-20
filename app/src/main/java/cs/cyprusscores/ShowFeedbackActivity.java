@@ -36,11 +36,10 @@ public class ShowFeedbackActivity extends AppCompatActivity {
         super.onPause();
     }
 
-    public void goHome(View view)
-    {
-        Intent home = new Intent(this,FeedbackActivity.class);
+    public void goHome(View view) {
+        Intent home = new Intent(this, FeedbackActivity.class);
         startActivity(home);
-        Toast.makeText(getApplicationContext(),"Thank you for your feedback!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Thank you for your feedback!", Toast.LENGTH_SHORT).show();
     }
 
 }

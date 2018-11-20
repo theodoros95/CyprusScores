@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Stadium1"
-      android:background="#e6ffe6">
+    android:background="#e6ffe6"
+    tools:context=".Stadium1">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -17,9 +16,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="56dp"
         android:text="GSP Stadium"
-        android:textSize="28dp"
         android:textColor="#000"
-        android:textStyle="bold"/>
+        android:textSize="28dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView6"
@@ -29,8 +28,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="116dp"
         android:text="Location: Nicosia"
-        android:textSize="24dp"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/textView7"
@@ -40,7 +39,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="156dp"
         android:text="Capacity: 22,859"
-        android:textSize="24dp"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textSize="24dp" />
 
 </RelativeLayout>

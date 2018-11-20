@@ -18,33 +18,30 @@ public class TimerService extends Service {
     private Timer timer = new Timer();
     private int count = 0;
 
-    public TimerService()
-    {
+    public TimerService() {
 
     }
 
-    public void onCreate()
-    {
-        if(mTimer != null) {
+    public void onCreate() {
+        if (mTimer != null) {
             mTimer.cancel();
         } else {
             mTimer = new Timer();
         }
-        mTimer.scheduleAtFixedRate(new TimeDisplay(),0,interval);
+        mTimer.scheduleAtFixedRate(new TimeDisplay(), 0, interval);
     }
 
-    class TimeDisplay extends TimerTask
-    {
+    class TimeDisplay extends TimerTask {
         public void run() {
             mHandler.post(new Runnable() {
 
                 @Override
                 public void run() {
 
-                    if (count ==15) {
+                    if (count == 15) {
                         Toast.makeText(getApplicationContext(), "15 seconds passed",
                                 Toast.LENGTH_SHORT).show();
-                    }else if (count >29) {
+                    } else if (count > 29) {
                         Intent dialogIntent = new Intent(getApplicationContext(), FeedbackActivity.class);
                         dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(dialogIntent);
@@ -63,23 +60,20 @@ public class TimerService extends Service {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
-    public int onStartCommand(Intent intent,int flag,int startId)
-    {
+    public int onStartCommand(Intent intent, int flag, int startId) {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 System.out.println("Seconds running: " + count);
                 count++;
             }
-        },0,1000);
+        }, 0, 1000);
 
-        return super.onStartCommand(intent,flag,startId);
+        return super.onStartCommand(intent, flag, startId);
     }
 
-   public void onDestroy()
-    {
-        if (timer != null)
-        {
+    public void onDestroy() {
+        if (timer != null) {
             timer.cancel();
             mTimer.cancel();
             System.out.println("Service Stopped");

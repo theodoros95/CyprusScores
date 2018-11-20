@@ -1,143 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="15dp"
     android:paddingLeft="20dp"
+    android:paddingTop="15dp"
     tools:context=".FeedbackActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rate our application!"
-        android:textSize="18dp"
         android:layout_marginLeft="7dp"
-        />
+        android:text="Rate our application!"
+        android:textSize="18dp" />
 
     <RatingBar
+        android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rating"
-        android:numStars="5"
         android:layout_marginTop="5dp"
+        android:numStars="5"
 
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
         android:text="Did you like our application?"
-        android:textSize="18dp"
-        android:layout_marginLeft="7dp"/>
+        android:textSize="18dp" />
 
     <RadioGroup
+        android:id="@+id/likeanswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/likeanswer"
         android:layout_marginLeft="4dp"
         android:layout_marginBottom="10dp">
 
         <RadioButton
+            android:id="@+id/likeyes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/likeyes"
-            android:text="Yes"
-            android:textSize="18dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:checked="true"
-            />
+            android:text="Yes"
+            android:textSize="18dp" />
 
         <RadioButton
+            android:id="@+id/likeno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/likeno"
-            android:text="No"
-            android:textSize="18dp"
             android:checked="false"
-            />
+            android:text="No"
+            android:textSize="18dp" />
 
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
         android:text="Write your review about our application"
-        android:textSize="18dp"
-        android:layout_marginLeft="7dp"/>
+        android:textSize="18dp" />
 
     <EditText
+        android:id="@+id/reviewtext"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="4dp"
-        android:hint="Write your review here"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        android:id="@+id/reviewtext"
-        android:inputType="text"
+        android:hint="Write your review here"
         android:imeOptions="actionDone"
-        />
+        android:inputType="text" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
         android:text="Receive our response by email"
-        android:textSize="18dp"
-        android:layout_marginLeft="7dp"/>
+        android:textSize="18dp" />
 
     <RadioGroup
+        android:id="@+id/emailanswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/emailanswer"
         android:layout_marginLeft="4dp"
-        android:layout_marginBottom="5dp"
-        >
+        android:layout_marginBottom="5dp">
 
         <RadioButton
+            android:id="@+id/emailyes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/emailyes"
-            android:text="Yes"
-            android:textSize="18dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:checked="true"
-            />
+            android:text="Yes"
+            android:textSize="18dp" />
 
         <RadioButton
+            android:id="@+id/emailno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/emailno"
-            android:text="No"
-            android:textSize="18dp"
             android:checked="false"
-            />
+            android:text="No"
+            android:textSize="18dp" />
 
     </RadioGroup>
 
     <EditText
+        android:id="@+id/emailaddress"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="4dp"
-        android:hint="Type your email address"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
-        android:id="@+id/emailaddress"
-        android:inputType="textEmailAddress"
+        android:hint="Type your email address"
         android:imeOptions="actionDone"
-        />
+        android:inputType="textEmailAddress" />
 
     <Button
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:onClick="sendInfo"
         android:text="Submit"
-        android:textSize="18dp"
-        android:id="@+id/submit"
-        android:onClick="sendInfo"/>
+        android:textSize="18dp" />
 
 
 </LinearLayout>

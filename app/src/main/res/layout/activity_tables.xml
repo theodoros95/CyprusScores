@@ -8,146 +8,152 @@
     tools:context=".Tables">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:orientation="horizontal"
         android:layout_marginBottom="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Teams"
-            android:layout_weight="1"
-            android:textSize="34dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="34dp" />
 
         <TextView
-            android:text="W  D  L   PTS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="W  D  L   PTS" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:text="1. ΟΜΟΝΟΙΑ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="teamClicked"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="1. ΟΜΟΝΟΙΑ"
+            android:textSize="20dp" />
+
         <TextView
-            android:text="4  0  0      12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="4  0  0      12" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="2. ΑΠΟΕΛ"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="20dp" />
+
         <TextView
-            android:text="3  1  1      10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="3  1  1      10" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="3. ΑΝΟΡΘΩΣΗ"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="20dp" />
+
         <TextView
-            android:text="2  1  2        7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="2  1  2        7" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="4. ΑΕΛ"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="20dp" />
+
         <TextView
-            android:text="2  0  2        6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="2  0  2        6" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="5. ΑΠΟΛΛΩΝ"
-            android:textSize="20dp"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="20dp" />
+
         <TextView
-            android:text="1  1  0        4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="1  1  0        4" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:text="6. ΝΕΑ ΣΑΛΑΜΙΝΑ"
-            android:layout_weight="1"
-            android:textSize="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6. ΝΕΑ ΣΑΛΑΜΙΝΑ"
+            android:textSize="20dp" />
+
         <TextView
-            android:text="1  0  0        3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="right"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:text="1  0  0        3" />
     </LinearLayout>
 
 </LinearLayout>

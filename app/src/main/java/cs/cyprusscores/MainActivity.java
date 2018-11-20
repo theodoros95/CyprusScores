@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(this, CalendarActivity.class));
         } else if (id == R.id.nav_notifications) {
-
+            startActivity(new Intent(this, NotificationsActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

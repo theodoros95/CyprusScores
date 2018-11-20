@@ -144,7 +144,7 @@ public class NotificationsActivity extends AppCompatActivity {
                     nicon = BitmapFactory.decodeResource(getResources(), R.drawable.football);
                 } else if (icon.equals("bell")) {
                     nicon = BitmapFactory.decodeResource(getResources(), R.drawable.bell);
-                } else if (icon.equals("cfa")) {
+                } else if (icon.equals("cfa2")) {
                     nicon = BitmapFactory.decodeResource(getResources(), R.drawable.cfa2);
                 } else {
                     nicon = BitmapFactory.decodeResource(getResources(), R.drawable.ball);
@@ -196,8 +196,8 @@ public class NotificationsActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
 
         if (id == R.id.settings) {
-//            Intent home = new Intent(this, NotificationsSettings.class);
-//            startActivity(home);
+            Intent home = new Intent(this, NotificationsSettings.class);
+            startActivity(home);
         }
 
         return super.onOptionsItemSelected(item);

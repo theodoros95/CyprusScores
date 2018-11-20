@@ -15,6 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--Theodoros-->
         <activity
             android:name=".LoginActivity"
             android:label="Cyprus Scores">
@@ -49,6 +51,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cs.cyprusscores.MainActivity" />
         </activity>
+
+        <!--Giorgos-->
         <activity
             android:name=".TeamActivity"
             android:label="CLUB"
@@ -82,17 +86,22 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!--Antonis-->
-        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".FeedbackActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cs.cyprusscores.MainActivity" />
+        </activity>
         <activity android:name=".ShowFeedbackActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".FeedbackActivity" />
+                android:value="cs.cyprusscores.MainActivity" />
         </activity>
 
         <service
             android:name=".TimerService"
             android:enabled="true"
             android:exported="true" />
+
         <activity
             android:name=".NotificationsActivity"
             android:parentActivityName=".FeedbackActivity"
@@ -100,6 +109,11 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cs.cyprusscores.FeedbackActivity" />
+        </activity>
+        <activity android:name=".NotificationsSettings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NotificationsActivity" />
         </activity>
 
     </application>

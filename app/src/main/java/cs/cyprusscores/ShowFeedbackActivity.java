@@ -41,5 +41,4 @@ public class ShowFeedbackActivity extends AppCompatActivity {
         startActivity(home);
         Toast.makeText(getApplicationContext(), "Thank you for your feedback!", Toast.LENGTH_SHORT).show();
     }
-
 }

@@ -70,12 +70,9 @@ public class NotificationsSettings extends AppCompatActivity {
             System.err.println("Error: " + ex.getMessage());
         }
 
-        talk = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
-                    talk.setLanguage(Locale.UK);
-                }
+        talk = new TextToSpeech(getApplicationContext(), status -> {
+            if (status != TextToSpeech.ERROR) {
+                talk.setLanguage(Locale.UK);
             }
         });
     }

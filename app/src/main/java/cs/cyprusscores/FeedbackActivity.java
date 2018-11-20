@@ -43,30 +43,25 @@ public class FeedbackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
-        final RadioGroup radio = (RadioGroup) findViewById(R.id.emailanswer);
+        final RadioGroup radio = findViewById(R.id.emailanswer);
         final EditText email = findViewById(R.id.emailaddress);
-        radio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radio.setOnCheckedChangeListener((group, checkedId) -> {
 
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+            View radioButton = radio.findViewById(checkedId);
+            int index = radio.indexOfChild(radioButton);
 
-                View radioButton = radio.findViewById(checkedId);
-                int index = radio.indexOfChild(radioButton);
-
-                switch (index) {
-                    case 0:
-                        email.setEnabled(true);
-                        email.setHint("Type your email address");
-                        break;
-                    case 1:
-                        email.setEnabled(false);
-                        email.setHint("You will not receive any email");
-                        if (!email.getText().toString().equals(""))
-                            email.setText("");
-
-                        break;
-                }
+            switch (index) {
+                case 0:
+                    email.setEnabled(true);
+                    email.setHint("Type your email address");
+                    break;
+                case 1:
+                    email.setEnabled(false);
+                    email.setHint("You will not receive any email");
+                    if (!email.getText().toString().equals(""))
+                        email.setText("");
+                    break;
             }
-
         });
 
         RadioGroup rgl = findViewById(R.id.likeanswer);
@@ -86,7 +81,6 @@ public class FeedbackActivity extends AppCompatActivity {
             DataInputStream in = new DataInputStream(fin);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String strLine;
-
 
             while ((strLine = br.readLine()) != null) {
                 for (int i = 0; i < strLine.indexOf("$"); i++) {
@@ -135,11 +129,7 @@ public class FeedbackActivity extends AppCompatActivity {
             NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
             NetworkInfo mobile = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 
-            if ((mobile != null && mobile.isConnectedOrConnecting()) || (wifi != null && wifi.isConnectedOrConnecting())) {
-                return true;
-            } else {
-                return false;
-            }
+            return (mobile != null && mobile.isConnectedOrConnecting()) || (wifi != null && wifi.isConnectedOrConnecting());
         } else {
             return false;
         }
@@ -213,7 +203,6 @@ public class FeedbackActivity extends AppCompatActivity {
                             });
 
                     try {
-
                         message = new MimeMessage(session);
                         message.setFrom(new InternetAddress(from));
                         message.setRecipients(Message.RecipientType.TO,
@@ -233,15 +222,11 @@ public class FeedbackActivity extends AppCompatActivity {
                         multipart.addBodyPart(messageBodyPart);
                         message.setContent(multipart);
 
-                        final Thread thread = new Thread(new Runnable() {
-
-                            @Override
-                            public void run() {
-                                try {
-                                    Transport.send(message);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
+                        final Thread thread = new Thread(() -> {
+                            try {
+                                Transport.send(message);
+                            } catch (Exception e) {
+                                e.printStackTrace();
                             }
                         });
 
@@ -285,6 +270,5 @@ public class FeedbackActivity extends AppCompatActivity {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
     }
 }

@@ -1,7 +1,5 @@
 package cs.cyprusscores;
 
-import android.app.ActionBar;
-import android.app.ListFragment;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,19 +27,19 @@ public class SquadActivity extends AppCompatActivity {
         image2.startAnimation(animation);
     }
 
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         Intent myIntent = new Intent(getApplicationContext(), TeamActivity.class);
         startActivityForResult(myIntent, 0);
         return true;
     }
 
-    public void showPlayer1(View view){
+    public void showPlayer1(View view) {
         Bundle info = new Bundle();
         info.putString("name", "Demetris Christophi");
         info.putString("age", "30");
         info.putString("nat", "Cypriot");
         info.putString("num", "77");
-        info.putString("apps", "20" );
+        info.putString("apps", "20");
         info.putString("goals", "8");
         info.putString("assists", "5");
 
@@ -50,7 +48,7 @@ public class SquadActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showPlayer2(View view){
+    public void showPlayer2(View view) {
         Bundle info = new Bundle();
         info.putString("name", "Matt Derbyshire");
         info.putString("age", "32");
@@ -64,5 +62,4 @@ public class SquadActivity extends AppCompatActivity {
         intent.putExtras(info);
         startActivity(intent);
     }
-
 }

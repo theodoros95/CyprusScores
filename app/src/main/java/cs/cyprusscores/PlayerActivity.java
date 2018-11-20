@@ -70,7 +70,6 @@ public class PlayerActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_player, menu);
         return true;
     }
@@ -82,7 +81,6 @@ public class PlayerActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.club) {
             Intent intent = new Intent(this, TeamActivity.class);
             startActivity(intent);
@@ -181,6 +179,5 @@ public class PlayerActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://en.wikipedia.org/wiki/Matt_Derbyshire"));
             startActivity(intent);
         }
-
     }
 }

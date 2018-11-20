@@ -19,7 +19,6 @@ public class TimerService extends Service {
     private int count = 0;
 
     public TimerService() {
-
     }
 
     public void onCreate() {
@@ -33,22 +32,18 @@ public class TimerService extends Service {
 
     class TimeDisplay extends TimerTask {
         public void run() {
-            mHandler.post(new Runnable() {
+            mHandler.post(() -> {
 
-                @Override
-                public void run() {
-
-                    if (count == 15) {
-                        Toast.makeText(getApplicationContext(), "15 seconds passed",
-                                Toast.LENGTH_SHORT).show();
-                    } else if (count > 29) {
-                        Intent dialogIntent = new Intent(getApplicationContext(), FeedbackActivity.class);
-                        dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(dialogIntent);
-                        Toast.makeText(getApplicationContext(), "30 seconds passed.Redirecting to main page...",
-                                Toast.LENGTH_SHORT).show();
-                        stopSelf();
-                    }
+                if (count == 15) {
+                    Toast.makeText(getApplicationContext(), "15 seconds passed",
+                            Toast.LENGTH_SHORT).show();
+                } else if (count > 29) {
+                    Intent dialogIntent = new Intent(getApplicationContext(), FeedbackActivity.class);
+                    dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(dialogIntent);
+                    Toast.makeText(getApplicationContext(), "30 seconds passed.Redirecting to main page...",
+                            Toast.LENGTH_SHORT).show();
+                    stopSelf();
                 }
             });
         }

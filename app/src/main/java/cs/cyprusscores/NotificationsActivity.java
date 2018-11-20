@@ -39,7 +39,7 @@ public class NotificationsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -181,19 +181,13 @@ public class NotificationsActivity extends AppCompatActivity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_notifications, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
 
         if (id == R.id.settings) {
             Intent home = new Intent(this, NotificationsSettings.class);
@@ -270,7 +264,7 @@ public class NotificationsActivity extends AppCompatActivity {
             data5 = "no";
         }
 
-        if ((c1.isChecked() == false) && (c2.isChecked() == false) && (c3.isChecked() == false) && (c4.isChecked() == false) && (c5.isChecked() == false)) {
+        if ((!c1.isChecked()) && (!c2.isChecked()) && (!c3.isChecked()) && (!c4.isChecked()) && (!c5.isChecked())) {
             selected = "You haven't selected anything";
         }
 

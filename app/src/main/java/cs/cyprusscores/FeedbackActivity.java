@@ -33,8 +33,8 @@ import javax.mail.internet.MimeMultipart;
 public class FeedbackActivity extends AppCompatActivity {
 
     private static final String SMTP_HOST_NAME = "smtp.gmail.com";
-    private static final String SMTP_AUTH_USER = "antonisch.77@gmail.com";
-    private static final String SMTP_AUTH_PWD = "antonisafc77";
+    private static final String SMTP_AUTH_USER = "cyprusscores7@gmail.com";
+    private static final String SMTP_AUTH_PWD = "cyscores1234";
     private static Message message;
     String file = "feedbackfile.txt";
 
@@ -182,7 +182,7 @@ public class FeedbackActivity extends AppCompatActivity {
                     Toast.makeText(this, "You must enter your email address", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    String from = "antonisch.77@gmail.com";
+                    String from = "cyprusscores7@gmail.com";
 
                     final String username = SMTP_AUTH_USER;
                     final String password = SMTP_AUTH_PWD;

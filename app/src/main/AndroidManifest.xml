@@ -86,12 +86,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!--Antonis-->
-        <activity android:name=".FeedbackActivity">
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="Feedback">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cs.cyprusscores.MainActivity" />
         </activity>
-        <activity android:name=".ShowFeedbackActivity">
+        <activity
+            android:name=".ShowFeedbackActivity"
+            android:label="Feedback Results">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cs.cyprusscores.MainActivity" />
@@ -104,18 +108,19 @@
 
         <activity
             android:name=".NotificationsActivity"
+            android:label="Notifications"
             android:parentActivityName=".FeedbackActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cs.cyprusscores.FeedbackActivity" />
         </activity>
-        <activity android:name=".NotificationsSettings">
+        <activity
+            android:name=".NotificationsSettings"
+            android:label="Notifications Settings">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NotificationsActivity" />
         </activity>
-
     </application>
-
 </manifest>

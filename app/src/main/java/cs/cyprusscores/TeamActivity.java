@@ -24,6 +24,7 @@ public class TeamActivity extends AppCompatActivity {
         setContentView(R.layout.activity_team);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         WebView webView = findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());

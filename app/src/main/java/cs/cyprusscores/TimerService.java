@@ -38,10 +38,11 @@ public class TimerService extends Service {
                     Toast.makeText(getApplicationContext(), "15 seconds passed",
                             Toast.LENGTH_SHORT).show();
                 } else if (count > 29) {
-                    Intent dialogIntent = new Intent(getApplicationContext(), FeedbackActivity.class);
+                    Intent dialogIntent = new Intent(getApplicationContext(), MainActivity.class);
                     dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(dialogIntent);
-                    Toast.makeText(getApplicationContext(), "30 seconds passed.Redirecting to main page...",
+                    Toast.makeText(getApplicationContext(),
+                            "30 seconds passed. Redirecting to main page...",
                             Toast.LENGTH_SHORT).show();
                     stopSelf();
                 }
